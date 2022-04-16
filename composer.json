@@ -1,18 +1,18 @@
 {
-    "name": "maileryio/widget-multiselect",
+    "name": "maileryio/widget-select",
     "type": "library",
-    "description": "Multiselect Widget for Mailery Platform",
+    "description": "Select Widget for Mailery Platform",
     "keywords": [
         "yii",
         "widget",
-        "multiselect"
+        "select"
     ],
-    "homepage": "https://github.com/maileryio/widget-multiselect",
+    "homepage": "https://github.com/maileryio/widget-select",
     "license": "BSD-3-Clause",
     "support": {
-        "source": "https://github.com/maileryio/widget-multiselect",
-        "issues": "https://github.com/maileryio/widget-multiselect/issues",
-        "wiki": "https://github.com/maileryio/widget-multiselect/wiki"
+        "source": "https://github.com/maileryio/widget-select",
+        "issues": "https://github.com/maileryio/widget-select/issues",
+        "wiki": "https://github.com/maileryio/widget-select/wiki"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
@@ -27,12 +27,12 @@
     },
     "autoload": {
         "psr-4": {
-            "Mailery\\Widget\\Multiselect\\": "src"
+            "Mailery\\Widget\\Select\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Mailery\\Widget\\Multiselect\\Tests\\": "tests"
+            "Mailery\\Widget\\Select\\Tests\\": "tests"
         }
     },
     "scripts": {

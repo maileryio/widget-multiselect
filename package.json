@@ -1,6 +1,6 @@
 {
     "license": "BSD-3-Clause",
     "dependencies": {
-        "@maileryio/widget-multiselect-assets": "git+ssh://git@github.com/maileryio/widget-multiselect-assets.git#master"
+        "@maileryio/widget-select-assets": "git+ssh://git@github.com/maileryio/widget-select-assets.git#master"
     }
 }

@@ -1,14 +1,14 @@
-# Multiselect Widget for Mailery Platform
+# Select Widget for Mailery Platform
 
-**Multiselect Widget for Mailery Platform**
+**Select Widget for Mailery Platform**
 
-[![Latest Stable Version](https://poser.pugx.org/maileryio/widget-multiselect/v/stable)](https://packagist.org/packages/maileryio/widget-multiselect)
-[![Total Downloads](https://poser.pugx.org/maileryio/widget-multiselect/downloads)](https://packagist.org/packages/maileryio/widget-multiselect)
-[![Build Status](https://travis-ci.com/maileryio/widget-multiselect.svg?branch=master)](https://travis-ci.com/maileryio/widget-multiselect)
-[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/maileryio/widget-multiselect.svg)](https://scrutinizer-ci.com/g/maileryio/widget-multiselect/)
-[![Scrutinizer Code Coverage](https://img.shields.io/scrutinizer/coverage/g/maileryio/widget-multiselect.svg)](https://scrutinizer-ci.com/g/maileryio/widget-multiselect/)
+[![Latest Stable Version](https://poser.pugx.org/maileryio/widget-select/v/stable)](https://packagist.org/packages/maileryio/widget-select)
+[![Total Downloads](https://poser.pugx.org/maileryio/widget-select/downloads)](https://packagist.org/packages/maileryio/widget-select)
+[![Build Status](https://travis-ci.com/maileryio/widget-select.svg?branch=master)](https://travis-ci.com/maileryio/widget-select)
+[![Scrutinizer Code Quality](https://img.shields.io/scrutinizer/g/maileryio/widget-select.svg)](https://scrutinizer-ci.com/g/maileryio/widget-select/)
+[![Scrutinizer Code Coverage](https://img.shields.io/scrutinizer/coverage/g/maileryio/widget-select.svg)](https://scrutinizer-ci.com/g/maileryio/widget-select/)
 
-Multiselect Widget for Mailery Platform
+Select Widget for Mailery Platform
 
 ## Installation
 
@@ -17,13 +17,13 @@ The preferred way to install this library is through [composer](http://getcompos
 Either run
 
 ```sh
-php composer.phar require "maileryio/widget-multiselect"
+php composer.phar require "maileryio/widget-select"
 ```
 
 or add
 
 ```json
-"maileryio/widget-multiselect": "*"
+"maileryio/widget-select": "*"
 ```
 
 to the require section of your composer.json.

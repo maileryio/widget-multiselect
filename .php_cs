@@ -2,9 +2,9 @@
 
 $date = date('Y');
 $header = <<<EOF
-Multiselect Widget for Mailery Platform
-@link      https://github.com/maileryio/widget-multiselect
-@package   Mailery\Widget\Multiselect
+Select Widget for Mailery Platform
+@link      https://github.com/maileryio/widget-select
+@package   Mailery\Widget\Select
 @license   BSD-3-Clause
 @copyright Copyright (c) {$date}, Mailery (https://mailery.io/)
 EOF;
