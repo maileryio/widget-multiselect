@@ -34,13 +34,6 @@ class SelectAssetBundle extends AssetBundle
     /**
      * {@inheritdoc}
      */
-    public array $css = [
-        'main.min.css',
-    ];
-
-    /**
-     * {@inheritdoc}
-     */
     public array $depends = [
         VueAssetBundle::class,
     ];
