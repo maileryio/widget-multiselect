@@ -4,7 +4,6 @@ namespace Mailery\Widget\Select;
 
 use Mailery\Widget\Select\SelectAssetBundle;
 use Yiisoft\Assets\AssetManager;
-use Yiisoft\Html\Html;
 use Yiisoft\Html\Tag\CustomTag;
 use Yiisoft\Form\Widget\Attribute\ChoiceAttributes;
 
@@ -78,19 +77,17 @@ class Select extends ChoiceAttributes
             throw new \InvalidArgumentException('Select widget value can not be an object.');
         }
 
-        if ($this->items !== []) {
-            $attributes['items'] = json_encode($this->items);
-        }
-
         if (is_iterable($value)) {
             $attributes['value'] = array_map('\strval', array_values($value));
         } elseif (null !== $value) {
             $attributes['value'] = $value;
         }
 
-        return CustomTag::name('ui-select')
-            ->attributes($attributes)
-            ->render();
+        if ($this->items !== []) {
+            $attributes['items'] = json_encode($this->items);
+        }
+
+        return CustomTag::name('ui-select')->attributes($attributes)->render();
     }
 
 }
