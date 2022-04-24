@@ -6,8 +6,9 @@ use Mailery\Widget\Select\SelectAssetBundle;
 use Yiisoft\Assets\AssetManager;
 use Yiisoft\Html\Tag\CustomTag;
 use Yiisoft\Form\Widget\Attribute\ChoiceAttributes;
+use Yiisoft\Form\Widget\Attribute\PlaceholderInterface;
 
-class Select extends ChoiceAttributes
+class Select extends ChoiceAttributes implements PlaceholderInterface
 {
 
     /**
@@ -35,7 +36,18 @@ class Select extends ChoiceAttributes
     public function items(array $value = []): self
     {
         $new = clone $this;
-        $new->items = $value;
+        $new->attributes['items'] = json_encode($value);
+        return $new;
+    }
+
+    /**
+     * @param string $value
+     * @return self
+     */
+    public function placeholder(string $value): self
+    {
+        $new = clone $this;
+        $new->attributes['placeholder'] = $value;
         return $new;
     }
 
@@ -46,7 +58,7 @@ class Select extends ChoiceAttributes
     public function multiple(bool $value = true): self
     {
         $new = clone $this;
-        $new->attributes['multiple'] = $value;
+        $new->attributes[':multiple'] = json_encode($value);
         return $new;
     }
 
@@ -57,7 +69,51 @@ class Select extends ChoiceAttributes
     public function taggable(bool $value = true): self
     {
         $new = clone $this;
-        $new->attributes['taggable'] = $value;
+        $new->attributes[':taggable'] = json_encode($value);
+        return $new;
+    }
+
+    /**
+     * @param bool $value
+     * @return self
+     */
+    public function clearable(bool $value = true): self
+    {
+        $new = clone $this;
+        $new->attributes[':clearable'] = json_encode($value);
+        return $new;
+    }
+
+    /**
+     * @param bool $value
+     * @return self
+     */
+    public function searchable(bool $value = true): self
+    {
+        $new = clone $this;
+        $new->attributes[':searchable'] = json_encode($value);
+        return $new;
+    }
+
+    /**
+     * @param bool $value
+     * @return self
+     */
+    public function closeOnSelect(bool $value = true): self
+    {
+        $new = clone $this;
+        $new->attributes[':close-on-select'] = json_encode($value);
+        return $new;
+    }
+
+    /**
+     * @param bool $value
+     * @return self
+     */
+    public function deselectFromDropdown(bool $value = true): self
+    {
+        $new = clone $this;
+        $new->attributes[':deselect-from-dropdown'] = json_encode($value);
         return $new;
     }
 
@@ -83,9 +139,9 @@ class Select extends ChoiceAttributes
             $attributes['value'] = $value;
         }
 
-        if ($this->items !== []) {
-            $attributes['items'] = json_encode($this->items);
-        }
+        $attributes['class-name'] = $attributes['class'] ?? '';
+
+        unset($attributes['class']);
 
         return CustomTag::name('ui-select')->attributes($attributes)->render();
     }
