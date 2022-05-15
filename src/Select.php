@@ -12,11 +12,6 @@ class Select extends ChoiceAttributes implements PlaceholderInterface
 {
 
     /**
-     * @var array
-     */
-    private array $items = [];
-
-    /**
      * @var AssetManager
      */
     private AssetManager $assetManager;
@@ -114,6 +109,17 @@ class Select extends ChoiceAttributes implements PlaceholderInterface
     {
         $new = clone $this;
         $new->attributes[':deselect-from-dropdown'] = json_encode($value);
+        return $new;
+    }
+
+    /**
+     * @param bool $value
+     * @return self
+     */
+    public function disable(bool $value = true): self
+    {
+        $new = clone $this;
+        $new->attributes[':disabled'] = json_encode($value);
         return $new;
     }
 
