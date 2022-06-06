@@ -31,7 +31,7 @@ class Select extends ChoiceAttributes implements PlaceholderInterface
     public function items(array $value = []): self
     {
         $new = clone $this;
-        $new->attributes['items'] = json_encode($value);
+        $new->attributes['items'] = json_encode($value, JSON_FORCE_OBJECT);
         return $new;
     }
 
