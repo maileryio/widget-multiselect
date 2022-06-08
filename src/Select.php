@@ -141,6 +141,8 @@ class Select extends ChoiceAttributes implements PlaceholderInterface
 
         if (is_iterable($value)) {
             $attributes['value'] = array_map('\strval', array_values($value));
+        } elseif (is_bool($value)) {
+            $attributes['value'] = (int) $value;
         } elseif (null !== $value) {
             $attributes['value'] = $value;
         }
