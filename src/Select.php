@@ -124,6 +124,17 @@ class Select extends ChoiceAttributes implements PlaceholderInterface
     }
 
     /**
+     * @param string $value
+     * @return self
+     */
+    public function inputCallback(string $value): self
+    {
+        $new = clone $this;
+        $new->attributes['@input-callback'] = $value;
+        return $new;
+    }
+
+    /**
      * {@inheritdoc}
      */
     protected function run(): string
