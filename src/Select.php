@@ -21,17 +21,11 @@ class Select extends InputField implements EnrichmentFromRulesInterface, Validat
     use PlaceholderTrait;
 
     /**
-     * @var AssetManager
-     */
-    private AssetManager $assetManager;
-
-    /**
      * @param AssetManager $assetManager
      */
-    public function __construct(AssetManager $assetManager)
-    {
-        $this->assetManager = $assetManager;
-    }
+    public function __construct(
+        private AssetManager $assetManager
+    ) {}
 
     /**
      * @param array $value
